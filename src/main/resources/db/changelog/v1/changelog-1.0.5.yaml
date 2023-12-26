@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: create attendee_session table
+      author: Rasul Huseynzade
+      changes:
+        - createTable:
+            tableName: attendee_session
+            columns:
+              - column:
+                  name: attendee_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_attendees_sessions_to_attendees
+                    references: attendees(id)
+                    nullable: false
+              - column:
+                  name: sessions_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_attendees_sessions_to_sessions
+                    references: sessions(id)
+                    nullable: false
