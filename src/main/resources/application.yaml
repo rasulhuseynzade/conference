@@ -1,0 +1,16 @@
+spring:
+  liquibase:
+    enabled: false
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/conference
+    username: postgres
+    password: rasul96
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+
+
+
